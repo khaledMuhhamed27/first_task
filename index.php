@@ -10,7 +10,7 @@ $boot->header();
 require 'config.php';
 $getDatas = new insertData();
 $tasks = $getDatas->readD();
-// $صش
+
 ?>
 <table class="table table-striped mt-5">
     <thead>

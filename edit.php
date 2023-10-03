@@ -12,7 +12,6 @@ require 'config.php';
 $getDatas = new insertData();
 $clickId = $_POST['butval'];
 $task = $getDatas->readE($clickId);
-var_dump($task);
 ?>
 
 <!-- ... (previous code remains the same) ... -->
