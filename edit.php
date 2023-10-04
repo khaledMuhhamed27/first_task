@@ -37,6 +37,16 @@ $task = $getDatas->readE($clickId);
                     <label>book price</label>
                     <input type="number" class="form-control" placeholder="Enter The Price" name="price" value="<?php echo $book->price; ?>">
                 </div>
+                <!-- isbn input -->
+                <div class="form-group">
+                    <label>book isbn</label>
+                    <input type="text" class="form-control" placeholder="Enter Thr isbn" name="isbn" value="<?php echo $book->isbn; ?>">
+                </div>
+                <!-- date input -->
+                <div class="form-group">
+                    <label>book date</label>
+                    <input type="date" class="form-control" name="bdate" value="<?php echo $book->published; ?>">
+                </div>
                 <button type="submit" class="btn btn-primary" name="saveedit" value="<?php echo $book->id; ?>">Save Edit</button>
             <?php endforeach; ?>
 

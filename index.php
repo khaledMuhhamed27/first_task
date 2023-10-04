@@ -16,10 +16,11 @@ $tasks = $getDatas->readD();
     <thead>
         <tr>
 
-            <th scope="col">#</th>
+            <th scope="col"># isbn</th>
             <th scope="col">Title</th>
             <th scope="col">Author</th>
             <th scope="col">Price</th>
+            <th scope="col">Date</th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -27,10 +28,11 @@ $tasks = $getDatas->readD();
     <tbody>
         <?php foreach ($tasks as $task) : ?>
             <tr>
-                <th scope="row"><?php echo $task->id; ?></th>
+                <th scope="row"><?php echo $task->isbn; ?></th>
                 <td><?php echo $task->title; ?></td>
                 <td><?php echo $task->author; ?></td>
                 <td><?php echo $task->price; ?></td>
+                <td><?php echo $task->published; ?></td>
                 <td>
                     <!-- button -->
                     <div class="btn-group" role="group" aria-label="Basic example">
@@ -50,5 +52,5 @@ $tasks = $getDatas->readD();
 </table>
 
 <div style="text-align: center">
-    <a class="btn btn-success w-50" href="signup.php">Add New Book</a>
+    <a class="btn btn-success w-50" href="addbook.php">Add New Book</a>
 </div>

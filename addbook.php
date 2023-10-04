@@ -13,7 +13,7 @@ $boot->header();
 <body>
     <div class='container my-5'>
 
-        <form action="signupcod.php" method="post">
+        <form action="addbookcod.php" method="post">
 
             <!-- title inputs -->
             <div class="form-group">
@@ -29,6 +29,16 @@ $boot->header();
             <div class="form-group">
                 <label>book price</label>
                 <input type="number" class="form-control" placeholder="Enter Thr Price" name="price" autocomplete="off">
+            </div>
+            <!-- isbn input -->
+            <div class="form-group">
+                <label>book isbn</label>
+                <input type="text" class="form-control" placeholder="Enter Thr isbn" name="isbn" autocomplete="off">
+            </div>
+            <!-- date input -->
+            <div class="form-group">
+                <label>book date</label>
+                <input type="date" class="form-control" name="bdate" autocomplete="off">
             </div>
             <button type="submit" class="btn btn-primary" name="save" value="save">Save</button>
         </form>

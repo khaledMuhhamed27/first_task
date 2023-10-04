@@ -7,17 +7,22 @@ class insertData
     private $title;
     private $author;
     private $price;
+    private $isbn;
+    private $publishData;
     protected $pdo;
 
 
 
     // constructor
-    public function __construct($id = 0, $title = '', $author = '', $price = 0)
+    public function __construct($id = 0, $title = '', $author = '', $price = 0, $isbn = '', $publishData = 0)
     {
         $this->id = $id;
         $this->title = $title;
         $this->author = $author;
         $this->price = $price;
+        $this->isbn = $isbn;
+        $this->publishData = $publishData;
+
 
         $this->pdo =
             new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
@@ -65,13 +70,32 @@ class insertData
     {
         return $this->price;
     }
+    // 5 isbn
+    public function setIsbn($isbn)
+    {
+        $this->isbn = $isbn;
+    }
 
+    public function getIsbn()
+    {
+        return $this->isbn;
+    }
+    // 6 published data
+    public function setPubData($publishData)
+    {
+        $this->publishData = $publishData;
+    }
+
+    public function getPubData()
+    {
+        return $this->publishData;
+    }
     // insert function
     public function insrtD()
     {
         try {
-            $query = $this->pdo->prepare('INSERT INTO books(title,author,price) VALUES (?,?,?)');
-            $query->execute([$this->title, $this->author, $this->price]);
+            $query = $this->pdo->prepare('INSERT INTO books(title,author,price,isbn,published) VALUES (?,?,?,?,?)');
+            $query->execute([$this->title, $this->author, $this->price, $this->isbn, $this->publishData]);
         } catch (\Exception $th) {
             return $th->getMessage();
         }
@@ -115,8 +139,8 @@ class insertData
     public function updateD()
     {
         try {
-            $query = $this->pdo->prepare('UPDATE books SET title=?, author=?, price=? WHERE id=?');
-            $query->execute([$this->title, $this->author, $this->price, $this->id]);
+            $query = $this->pdo->prepare('UPDATE books SET title=?, author=?, price=? , isbn=?, published=? WHERE id=?');
+            $query->execute([$this->title, $this->author, $this->price, $this->isbn, $this->publishData, $this->id]);
         } catch (\Exception $th) {
             return $th->getMessage();
         }

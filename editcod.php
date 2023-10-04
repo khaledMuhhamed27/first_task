@@ -6,6 +6,8 @@ if (isset($_POST['saveedit'])) {
     $sdata->setAuthor($_POST['author']);
     $sdata->setPrice($_POST['price']);
     $sdata->setId($_POST['saveedit']);
+    $sdata->setIsbn($_POST['isbn']);
+    $sdata->setPubData($_POST['bdate']);
 
     $sdata->updateD();
     echo "<script>alert('has been successfully updated');document.location='index.php'</script>";
