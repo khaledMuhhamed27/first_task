@@ -8,8 +8,8 @@ class insertData
     private $author;
     private $price;
     protected $pdo;
-     
-    
+
+
 
     // constructor
     public function __construct($id = 0, $title = '', $author = '', $price = 0)
@@ -99,26 +99,26 @@ class insertData
             $th->getMessage();
         }
     }
-       // read for edit
+    // read for edit
 
-       public function readE($clickId)
-{
-    try {
-        $query = $this->pdo->prepare('SELECT * FROM books WHERE id = ?');
-        $query->execute([$clickId]);
-        return $query->fetchAll(PDO::FETCH_OBJ);
-    } catch (\Exception $th) {
-        return $th->getMessage();
+    public function readE($clickId)
+    {
+        try {
+            $query = $this->pdo->prepare('SELECT * FROM books WHERE id = ?');
+            $query->execute([$clickId]);
+            return $query->fetchAll(PDO::FETCH_OBJ);
+        } catch (\Exception $th) {
+            return $th->getMessage();
+        }
     }
-}
-     // update function
-     public function updateD()
-     {
-         try {
-             $query = $this->pdo->prepare('UPDATE books SET title=?, author=?, price=? WHERE id=?');
-             $query->execute([$this->title, $this->author, $this->price, $this->id]);
-         } catch (\Exception $th) {
-             return $th->getMessage();
-         }
-     }
+    // update function
+    public function updateD()
+    {
+        try {
+            $query = $this->pdo->prepare('UPDATE books SET title=?, author=?, price=? WHERE id=?');
+            $query->execute([$this->title, $this->author, $this->price, $this->id]);
+        } catch (\Exception $th) {
+            return $th->getMessage();
+        }
+    }
 }

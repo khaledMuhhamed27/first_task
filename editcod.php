@@ -8,7 +8,7 @@ if (isset($_POST['saveedit'])) {
     $sdata->setId($_POST['saveedit']);
 
     $sdata->updateD();
-        echo "<script>alert('has been successfully updated');document.location='index.php'</script>";  
+    echo "<script>alert('has been successfully updated');document.location='index.php'</script>";
     // finaly
 
 

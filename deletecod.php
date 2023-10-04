@@ -2,7 +2,7 @@
 if (isset($_POST['removItem'])) {
     require 'config.php';
     $sdata = new insertData();
-    $bookId = $_POST['removItem']; 
+    $bookId = $_POST['removItem'];
 
     // Call the deleteBook function
 
