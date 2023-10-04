@@ -37,10 +37,10 @@ $tasks = $getDatas->readD();
                     <!-- button -->
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <form action="deletecod.php" method="post">
-                            <button class="btn btn-danger m-2" type="submit" name="removItem" value="<?php echo $task->id; ?>">Delete</button>
+                            <button class="btn btn-outline-danger m-2" type="submit" name="removItem" value="<?php echo $task->id; ?>">Delete</button>
                         </form>
                         <form action="edit.php" method="post">
-                            <button type="submit" name="butval" class="btn btn-warning m-2" value="<?php echo $task->id; ?>">edit</button>
+                            <button type="submit" name="butval" class="btn btn-outline-warning m-2" value="<?php echo $task->id; ?>">edit</button>
                         </form>
                     </div>
                     <!-- button -->

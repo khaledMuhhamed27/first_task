@@ -47,7 +47,7 @@ $task = $getDatas->readE($clickId);
                     <label>book date</label>
                     <input type="date" class="form-control" name="bdate" value="<?php echo $book->published; ?>">
                 </div>
-                <button type="submit" class="btn btn-primary" name="saveedit" value="<?php echo $book->id; ?>">Save Edit</button>
+                <button type="submit" class="btn btn-outline-primary" name="saveedit" value="<?php echo $book->id; ?>">Save Edit</button>
             <?php endforeach; ?>
 
         </form>

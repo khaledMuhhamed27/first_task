@@ -40,7 +40,7 @@ $boot->header();
                 <label>book date</label>
                 <input type="date" class="form-control" name="bdate" autocomplete="off">
             </div>
-            <button type="submit" class="btn btn-primary" name="save" value="save">Save</button>
+            <button type="submit" class="btn btn-outline-primary" name="save" value="save">Save</button>
         </form>
     </div>
 </body>
